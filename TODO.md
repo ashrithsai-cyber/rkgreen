@@ -1,8 +1,10 @@
-# Footer Design Improvement Tasks
+# TODO: Redesign About Us Page
 
-- [x] Update footer background to a subtle gradient
-- [x] Improve spacing and padding for better visual hierarchy
-- [x] Enhance typography (larger headings, better font weights)
-- [x] Add enhanced hover effects on links and icons
-- [x] Better align and style the social media section
-- [x] Ensure responsiveness across devices
+## Steps to Complete
+- [x] Redesign the About Us page layout with multiple sections
+- [x] Add hero section with company overview
+- [x] Add mission/vision section
+- [x] Add team photos section with dummy images
+- [x] Add company history section
+- [x] Update contact information section
+- [ ] Test the new design by running the development server
