@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Sun, Zap, Leaf, Shield, TrendingDown, Users } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { Avatar } from "@/components/ui/avatar";
+import { Sun, Zap, Leaf, Shield, TrendingDown, Users, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Header from "@/components/Header";
@@ -11,6 +14,51 @@ import TypewriterText from "@/components/TypewriterText";
 
 const Index = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const feedbacks = [
+    {
+      id: 1,
+      photo: "/p1.jpeg",
+      feedback: "Excellent service and installation. Our energy bills have reduced significantly!",
+      name: "Rajesh Kumar",
+      company: "Cedar Valley International School"
+    },
+    {
+      id: 2,
+      photo: "/p2.jpeg",
+      feedback: "Professional team and high-quality components. Highly recommended!",
+      name: "Priya Sharma",
+      company: "Airco Fin Tubes Pvt. Ltd."
+    },
+    {
+      id: 3,
+      photo: "/p3.jpeg",
+      feedback: "The solar system is performing beyond our expectations. Great ROI!",
+      name: "Amit Singh",
+      company: "Divino Villas Housing Society"
+    },
+    {
+      id: 4,
+      photo: "/p4.jpeg",
+      feedback: "Reliable after-sales support and maintenance. Very satisfied!",
+      name: "Sneha Patel",
+      company: "GreenTech Industries"
+    },
+    {
+      id: 5,
+      photo: "/p5.jpeg",
+      feedback: "Smooth installation process and excellent customer service.",
+      name: "Vikram Rao",
+      company: "Solar Solutions Ltd."
+    },
+    {
+      id: 6,
+      photo: "/p6.jpeg",
+      feedback: "Transformed our energy consumption. Worth every penny!",
+      name: "Kavita Jain",
+      company: "EcoPower Corp."
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -21,7 +69,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
           <div className="max-w-4xl ml-4">
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
               POWER YOUR FUTURE WITH{" "}
               <TypewriterText />
             </h1>
@@ -159,6 +207,71 @@ const Index = () => {
         </div>
       </section>
 
+      {/* PM Surya Ghar Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4">
+            PM Surya Ghar
+          </h2>
+          <div className="w-full text-center mb-12">
+            <img src="/PM SURYA GHAR.png" alt="PM Surya Ghar" className="w-full h-auto rounded-lg shadow-lg" />
+          </div>
+          <div className="text-center mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+              <img src="/C1.png" alt="Certificate 1" className="w-full max-w-64 h-auto rounded-lg border-2 border-gray-400" />
+              <img src="/C2.png" alt="Certificate 2" className="w-full max-w-64 h-auto rounded-lg border-2 border-gray-400" />
+              <img src="/C3.png" alt="Certificate 3" className="w-full max-w-64 h-auto rounded-lg border-2 border-gray-400" />
+              <img src="/C4.png" alt="Certificate 4" className="w-full max-w-64 h-auto rounded-lg border-2 border-gray-400" />
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+      {/* Meet Our Founders Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-12">
+            Meet Our Founders
+          </h2>
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="flex justify-center p-6">
+                <img
+                  src="/pro1.jpg"
+                  alt="Founder 1"
+                  className="w-48 h-48 object-cover rounded-full hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">Rajesh Kumar</h3>
+                <p className="text-primary font-semibold mb-2">Co-Founder & CEO</p>
+                <p className="text-muted-foreground text-sm">
+                  With over 20 years in renewable energy, Rajesh founded RK Solar to bring sustainable solutions to India, leading the company's vision and strategic growth.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="flex justify-center p-6">
+                <img
+                  src="/pro2.jpg"
+                  alt="Founder 2"
+                  className="w-48 h-48 object-cover rounded-full hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">Priya Sharma</h3>
+                <p className="text-primary font-semibold mb-2">Co-Founder & CTO</p>
+                <p className="text-muted-foreground text-sm">
+                  Expert in solar technology, Priya leads innovation in our product development and engineering, ensuring cutting-edge solutions for our clients.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Video Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -223,7 +336,50 @@ const Index = () => {
         </div>
       </section>
 
-
+      {/* Customer Feedback Section */}
+      <section id="feedback" className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-12">
+            Customer Feedback
+          </h2>
+          <div className="max-w-6xl mx-auto">
+            <Carousel
+              className="w-full"
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
+            >
+              <CarouselContent>
+                {feedbacks.map((feedback) => (
+                  <CarouselItem key={feedback.id} className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="h-full">
+                      <CardContent className="p-6 flex flex-col items-center text-center">
+                        <Avatar className="w-16 h-16 mb-4">
+                          <img src={feedback.photo} alt={feedback.name} className="w-full h-full object-cover rounded-full" />
+                        </Avatar>
+                        <div className="flex mb-4">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <p className="text-muted-foreground font-semibold mb-4 italic">
+                          "{feedback.feedback}"
+                        </p>
+                        <h3 className="text-lg font-bold mb-1">{feedback.name}</h3>
+                        <p className="text-sm text-muted-foreground">{feedback.company}</p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 bg-primary">

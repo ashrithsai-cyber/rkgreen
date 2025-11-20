@@ -14,7 +14,7 @@ const AboutUs = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-6xl font-black mb-6">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6">
                   ABOUT RK SOLAR GREEN MOUNT
                 </h1>
                 <p className="text-xl font-semibold text-muted-foreground mb-8">
@@ -23,7 +23,7 @@ const AboutUs = () => {
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-2">
                     <Sun className="h-6 w-6 text-primary" />
-                    <span className="font-semibold">25+ Years Experience</span>
+                    <span className="font-semibold">20+ Industrial Experience</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Users className="h-6 w-6 text-primary" />
@@ -51,32 +51,13 @@ const AboutUs = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-12">
               Our Mission & Vision
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="border-2 hover:border-primary transition-colors">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Target className="h-8 w-8 text-primary" />
-                    <h3 className="text-2xl font-bold">Our Mission</h3>
-                  </div>
-                  <p className="text-muted-foreground font-semibold">
-                    To make India a leader in sustainable and green energy usage by providing high-quality, affordable solar solutions that reduce carbon footprints and electricity costs for communities nationwide.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-2 hover:border-secondary transition-colors">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Sun className="h-8 w-8 text-secondary" />
-                    <h3 className="text-2xl font-bold">Our Vision</h3>
-                  </div>
-                  <p className="text-muted-foreground font-semibold">
-                    To empower every Indian household, business, and industry with clean, renewable solar energy, creating a sustainable future where green power is accessible to all.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="text-center">
+              <p className="text-muted-foreground font-semibold text-lg leading-relaxed max-w-4xl mx-auto text-justify">
+                At RK Solar Green Mount, we are driven by a powerful purpose to make clean, reliable, and affordable solar energy accessible to every home, business, and community across India. Our mission is to help people save on electricity, reduce carbon impact, and move toward energy independence through high-quality solar solutions and hassle-free installation. We envision a greener, self-sustaining India, where every rooftop becomes a source of clean power and every citizen plays a part in protecting our planet. Through innovation, trust, and excellence, we aim to become one of the nation's most trusted solar energy providers transforming sunlight into savings, sustainability, and a brighter tomorrow.
+              </p>
             </div>
           </div>
         </div>
@@ -89,7 +70,7 @@ const AboutUs = () => {
             <h2 className="text-4xl md:text-5xl font-black text-center mb-12">
               Meet Our Team
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
@@ -118,79 +99,46 @@ const AboutUs = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <img
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop"
-                  alt="Team member 3"
-                  className="w-full h-48 object-cover"
-                />
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Amit Patel</h3>
-                  <p className="text-primary font-semibold mb-2">Operations Manager</p>
-                  <p className="text-muted-foreground text-sm">
-                    Manages project execution and ensures seamless delivery of solar solutions nationwide.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Company History Section */}
+      {/* Financing Solutions Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black text-center mb-12">
-              Our Journey
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-left mb-12">
+              Our Financing Solutions
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <img src="/loan.jpg" alt="Loan Image" className="w-full h-48 object-cover rounded-lg shadow-lg mb-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <Card className="border-2 hover:border-primary transition-colors">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-bold">Residential Projects</h3>
+                </CardContent>
+              </Card>
+              <Card className="border-2 hover:border-primary transition-colors">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-bold">Commercial Projects</h3>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="grid grid-cols-1 gap-12 text-left">
               <div>
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">1999</div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Foundation</h3>
-                      <p className="text-muted-foreground font-semibold">
-                        RK Solar Green Mount was established with a vision to bring sustainable energy solutions to India.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold">2010</div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Expansion</h3>
-                      <p className="text-muted-foreground font-semibold">
-                        Expanded operations across multiple states, completing our first 1000 installations.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold">2020</div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Innovation</h3>
-                      <p className="text-muted-foreground font-semibold">
-                        Adopted cutting-edge solar technologies and achieved MNRE certification for quality assurance.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">2024</div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Leadership</h3>
-                      <p className="text-muted-foreground font-semibold">
-                        Reached 15,000+ installations and became a trusted name in India's solar energy sector.
-                      </p>
-                    </div>
-                  </div>
+                <h3 className="text-2xl font-bold mb-4">Residential Projects</h3>
+                <p className="text-muted-foreground font-semibold mb-6">
+                  We provide bank loans for residential solar projects, making it easier for homeowners to adopt sustainable energy solutions without upfront costs.
+                </p>
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="font-semibold">Partnered with leading banks</span>
                 </div>
               </div>
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&h=400&fit=crop"
-                  alt="Company history"
-                  className="w-full h-80 object-cover rounded-lg shadow-lg"
-                />
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Commercial Projects</h3>
+                <p className="text-muted-foreground font-semibold mb-6">
+                  For commercial projects, we tie up with JioFinance and fintech partners, offering zero down payment and up to 78% government subsidy.
+                </p>
               </div>
             </div>
           </div>
@@ -224,8 +172,8 @@ const AboutUs = () => {
                   <div className="flex items-center gap-4 p-4 bg-accent/10 rounded-lg">
                     <Award className="h-8 w-8 text-accent" />
                     <div>
-                      <h3 className="font-bold">MEMU Approved</h3>
-                      <p className="text-muted-foreground text-sm">Electrical equipment manufacturing unit certified</p>
+                      <h3 className="font-bold">MSME Approved</h3>
+                      <p className="text-muted-foreground text-sm">MSME Certified</p>
                     </div>
                   </div>
                 </div>
